@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <title>Enter Your name</title>
+  </head>
+  <body>
+    <div class="title">Lets Chat</div>
+    <div class="container">
+      <input type="text" id="t1" placeholder="Enter 1st Name...." />
+      <input type="text" id="t2" placeholder="Enter 2nd Name...." />
+      <button id="sb" onclick="sub()">Submit</button>
+    </div>
+  </body>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+    .container {
+      border: green;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 40px;
+      padding: 50px;
+    }
+    input {
+      color: black;
+      width: 400px;
+      font-size: 25px;
+      border-radius: 30px;
+      padding: 20px;
+      border: none;
+      border-bottom: 4px solid green;
+      background-color: transparent;
+    }
+    input::placeholder {
+      color: green;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    input:focus {
+      outline: 0;
+    }
+    button {
+      color: green;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 10px;
+      border-radius: 20px;
+      border: 2px solid green;
+      transition: 0.3s ease 0s;
+    }
+    button:hover {
+      transition: 0.3s ease 0s;
+      background-color: green;
+      color: white;
+      border-radius: 0px;
+    }
+    .title {
+      color: black;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 100px;
+      margin-bottom: 60px;
+    }
+    @media (max-width: 1000px) {
+      .title {
+        width: 50%;
+        font-size: 250px;
+        margin-bottom: 150px;
+        text-align: center;
+        font-weight: bold;
+      }
+      .container {
+        border: none;
+      }
+      input {
+        padding: 40px;
+        font-size: 70px;
+        width: 700px;
+      }
+      input::placeholder {
+        font-size: 50px;
+      }
+      button {
+        font-size: 70px;
+        padding: 20px;
+      }
+    }
+  </style>
+  <script>
+    let t1 = document.getElementById("t1");
+    let t2 = document.getElementById("t2");
+    function clrr() {
+      t1.value = "";
+      t2.value = "";
+    }
+    function sub() {
+      if (t1.value == "" && t2.value == "") {
+        alert("PLEASE ENTER DATAS");
+      } else if (t1.value == "") {
+        alert("Please Enter 1st Name");
+      } else if (t2.value == "") {
+        alert("Please Enter 2nd Name");
+      } else {
+        localStorage.setItem("name1", t1.value);
+        localStorage.setItem("name2", t2.value);
+        window.open("chat.html", "_self");
+        clrr();
+      }
+    }
+  </script>
+</html>
