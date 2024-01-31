@@ -55,12 +55,15 @@ body {
   .left {
     background-color: rgb(23, 155, 23);
     border: 2px solid rgb(23, 155, 23);
+    border-bottom-right-radius: 0px;
   }
 
   .right {
     color: white;
     background-color: rgb(74, 74, 74);
     border: 2px solid rgb(74, 74, 74);
+    border-bottom-left-radius: 0px;
+
   }
 
   .control {
