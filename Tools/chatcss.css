@@ -112,23 +112,6 @@ body {
     padding-left: 15px;
     padding-right: 15px;
   }
-  #nameplate {
-    transition: 0.3s ease 0s;
-    top: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    margin: 0;
-    padding: 20px;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-    font-size: 40px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: green;
-    background-color: white;
-  }
 
   @media (max-width: 800px) {
     .qto {
@@ -152,8 +135,5 @@ body {
     .change {
       left: 0;
       align-self: flex-start;
-    }
-    .nameplate {
-      font-size: 40px;
     }
   }

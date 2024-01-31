@@ -4,22 +4,16 @@ let x = -1;
       let textbox = document.getElementById("inp");
       let send = document.getElementById("snd");
       let change = document.getElementById("cng");
-      let name = document.getElementById("nameplate");
-      let first = localStorage.getItem("name1");
-      let second = localStorage.getItem("name2");
 
       if (x % 2 == 0) {
         textbox.style.borderColor = "green";
         send.style.backgroundColor = "green";
         change.style.backgroundColor = "green";
-        name.innerHTML = first;
-        name.style.color = "green";
+        
       } else {
         textbox.style.borderColor = "grey";
         send.style.backgroundColor = "grey";
         change.style.backgroundColor = "grey";
-        name.innerHTML = second;
-        name.style.color = "grey";
       }
     }
     increment();
