@@ -1,4 +1,6 @@
 let x = -1;
+let last = "right";
+let current = "right";
     function increment() {
       x += 1;
       let textbox = document.getElementById("inp");
@@ -9,11 +11,13 @@ let x = -1;
         textbox.style.borderColor = "green";
         send.style.backgroundColor = "green";
         change.style.backgroundColor = "green";
+        current = "right";
         
       } else {
         textbox.style.borderColor = "grey";
         send.style.backgroundColor = "grey";
         change.style.backgroundColor = "grey";
+        current = "left";
       }
     }
     increment();
@@ -33,9 +37,19 @@ let x = -1;
         message.classList.add("right", "msg");
       }
 
+
       message.innerHTML = data;
 
       quote.appendChild(message);
+
+      if (current !== last){
+        quote.style.marginTop = "25px";
+      }
+      else{
+        quote.style.marginTop = "5px";
+      }
+      
+      last = current;
 
       cont.appendChild(quote);
     }
@@ -50,8 +64,14 @@ let x = -1;
 
     document
       .getElementById("inp")
-      .addEventListener("keydown", function (event) {
+      .addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
           send();
+        }
+      });
+
+      document.addEventListener("keypress", function (event) {
+        if (event.key == "`") {
+          increment();
         }
       });

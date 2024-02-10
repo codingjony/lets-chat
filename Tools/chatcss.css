@@ -9,7 +9,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
   }
 
   .qto {
@@ -28,10 +27,6 @@ body {
 
   .left {
     align-self: flex-end;
-  }
-
-  .qto {
-    padding: 10px;
   }
 
   .msg {
