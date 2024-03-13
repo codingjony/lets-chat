@@ -1,6 +1,5 @@
 <h1>Simple Chat Interface</h1>
 
-Enter your Name , and Start Chatting <br>
 
 You Can use '@' to change user and Chat on Both Sides <br>
 
